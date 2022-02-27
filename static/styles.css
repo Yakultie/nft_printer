@@ -1,0 +1,238 @@
+@import "https://fonts.googleapis.com/css?family=Playfair+Display:900";
+@import "https://fonts.googleapis.com/css?family=Poppins";
+@import "https://fonts.googleapis.com/css?family=Inconsolata";
+
+body {
+	margin: 0;
+	scroll-snap-type: y mandatory
+}
+
+.fullscreen {
+	height: 100vh;
+	padding: 0
+}
+
+.section {
+	padding: 10px;
+	font-family: poppins, sans-serif
+}
+
+.fullscreen-bottom {
+	padding-top: 97vh;
+	position: absolute
+}
+
+.title {
+	font-family: poppins, sans-serif;
+	margin: 0
+}
+
+.subtitle {
+	font-family: poppins, sans-serif;
+	margin: 0;
+	margin-bottom: 10px
+}
+
+@media screen and (min-width:601px) {
+	.title {
+		font-size: 5vw
+	}
+	.subtitle {
+		font-size: 2vw
+	}
+}
+
+@media screen and (max-width:600px) {
+	.title {
+		font-size: 11vw
+	}
+	.subtitle {
+		font-size: 6vw
+	}
+}
+
+a {
+	color: #ff4842
+}
+
+.splash {
+	display: flex;
+	justify-content: center;
+	align-items: center
+}
+
+@media screen and (min-width:601px) {
+	.splash-content {
+		width: 30vw;
+		height: 25vh;
+		max-width: 700px
+	}
+	.splash-title {
+		font-size: 6vw
+	}
+	.splash-sub {
+		font-size: 1.5vw
+	}
+}
+
+@media screen and (max-width:600px) {
+	.splash-content {
+		width: 70vw;
+		height: 10vh;
+		max-width: 700px
+	}
+	.splash-title {
+		font-size: 10vw
+	}
+}
+
+.splash-text {
+	position: absolute;
+	z-index: 2;
+	padding-left: 20px
+}
+
+@keyframes shiftingGradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+.splash-title {
+	font-family: poppins, sans-serif;
+	margin: 0;
+	background-clip: text!important;
+	-webkit-background-clip: text!important;
+	background: linear-gradient(270deg, #53b7e8, #00ab4e, #f7943e, #7d499d, #a3238f, #f173ac, #c1cd23);
+	background-size: 400% 400%;
+	animation: shiftingGradient 3s ease infinite
+}
+
+.splash-title:hover {
+	color: transparent
+}
+
+.splash-sub {
+	font-family: poppins, sans-serif;
+	margin: 0;
+	color: #6d6d6d
+}
+
+@keyframes greyPulse {
+	0% {
+		color: #000
+	}
+	50% {
+		color: #fff
+	}
+	100% {
+		color: #000
+	}
+}
+
+@keyframes dropDown {
+	0% {
+		padding-top: 10vh;
+		opacity: 0
+	}
+	100% {
+		padding-top: 97vh;
+		opacity: 1
+	}
+}
+
+.splash-chevron {
+	animation: dropDown 3s
+}
+
+.about {
+	background-image: linear-gradient(20deg, rgb(180, 255, 239) 50%, white 50%)
+}
+
+.about-content {
+	margin: auto;
+	max-width: 800px
+}
+
+.projects {
+	background-image: linear-gradient(20deg, rgb(180, 255, 239) 50%, rgb(180, 255, 239) 50%)
+}
+
+.projects-content {
+	margin: auto;
+	max-width: 800px
+}
+
+.contact {
+	padding: 10px;
+	font-family: inconsolata, monospace;
+	background-image: linear-gradient(20deg, rgb(66, 217, 255) 50%, rgb(180, 255, 239) 50%);
+	display: flex;
+	justify-content: center;
+	align-items: center
+}
+
+.contact-content {
+	z-index: 2;
+	height: 30vh;
+	padding: 8px
+}
+
+.contact-title {
+	margin: 0;
+	font-family: poppins, sans-serif;
+	font-size: 5vw
+}
+
+.contact-link {
+	padding: 5px;
+	font-size: 4vw;
+	text-decoration: none;
+	background-image: linear-gradient(180deg, #000 0%, #000 100%);
+	background-repeat: no-repeat;
+	background-size: 0% 10px;
+	background-position: 0% 104%;
+	transition: ease .4s
+}
+
+.contact-link:hover {
+	background-size: 100% 10px
+}
+
+@media screen and (min-width:601px) {
+	.contact-title {
+		font-size: 5vw
+	}
+	.contact-link {
+		font-size: 4vw
+	}
+}
+
+@media screen and (max-width:600px) {
+	.contact-title {
+		font-size: 10vw
+	}
+	.contact-link {
+		font-size: 8vw
+	}
+}
+
+.footer {
+	z-index: 1;
+	font-family: inconsolata, monospace;
+	display: flex;
+	justify-content: center;
+	align-items: center
+}
+
+.footer-text {
+	margin: 0;
+	color: grey;
+	font-size: 1.5vh;
+}
